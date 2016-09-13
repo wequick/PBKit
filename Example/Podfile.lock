@@ -1,0 +1,32 @@
+PODS:
+  - FBSnapshotTestCase (2.1.2):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.2)
+  - FBSnapshotTestCase/Core (2.1.2)
+  - FBSnapshotTestCase/SwiftSupport (2.1.2):
+    - FBSnapshotTestCase/Core
+  - Kiwi (2.4.0)
+  - Pbind (0.1.9)
+  - PBKit (0.1.0):
+    - Pbind
+    - PBKit/PBDropdownMenu (= 0.1.0)
+  - PBKit/PBDropdownMenu (0.1.0):
+    - Pbind
+
+DEPENDENCIES:
+  - FBSnapshotTestCase
+  - Kiwi
+  - PBKit (from `../`)
+
+EXTERNAL SOURCES:
+  PBKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FBSnapshotTestCase: 918c55861356ee83aee7843d759f55a18ff6982b
+  Kiwi: f49c9d54b28917df5928fe44968a39ed198cb8a8
+  Pbind: 4aac062b565b853a65d6ef12cf9d78646e131b7a
+  PBKit: faeb9ba35a1e221486d8ff34f243bcbbda028b48
+
+PODFILE CHECKSUM: a6bcf07fe54bc3a829b3e066e44e649d0bd6df3d
+
+COCOAPODS: 1.0.1
