@@ -1,42 +1,24 @@
-#
-# Be sure to run `pod lib lint PBKit.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
-#
-
 Pod::Spec.new do |s|
   s.name             = 'PBKit'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of PBKit.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
+  s.summary          = 'UIKit with Pbind.'
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+A group of UI components that using Pbind which can simply configure layout and data source with Plist.
                        DESC
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/PBKit'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.homepage         = 'https://github.com/wequick/PBKit'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'galenlin' => 'oolgloo.2012@gmail.com' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/PBKit.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => 'https://github.com/wequick/PBKit.git', :tag => s.version.to_s }
+  s.social_media_url = 'https://weibo.com/galenlin'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '7.0'
 
-  s.source_files = 'PBKit/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'PBKit' => ['PBKit/Assets/*.png']
-  # }
+#  s.source_files = 'PBKit/Classes/**/*'
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.subspec 'PBDropdownMenu' do |sub|
+    sub.source_files = 'PBKit/Classes/PBDropdownMenu/**/*'
+  end
+
+  s.dependency 'Pbind' 
 end

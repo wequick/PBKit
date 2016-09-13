@@ -23,6 +23,7 @@
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		8AB12AEA40D2759B599CA034 /* Pods_PBKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 318AC3B8CC81F9454DFD4329 /* Pods_PBKit_Tests.framework */; };
 		E2BD4FD007BF562C067AF12F /* Pods_PBKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5F79C7130869A48C8A9EAF5 /* Pods_PBKit_Example.framework */; };
+		F89500B91D877B710038A3E5 /* PBDropdown.plist in Resources */ = {isa = PBXBuildFile; fileRef = F89500B81D877B710038A3E5 /* PBDropdown.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		9BD79D831155523CB3E87B9C /* Pods-PBKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PBKit_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PBKit_Example/Pods-PBKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		D5F79C7130869A48C8A9EAF5 /* Pods_PBKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PBKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E209452A476CD14D9B7450D2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		F89500B81D877B710038A3E5 /* PBDropdown.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PBDropdown.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 				6003F59C195388D20070C39A /* PBAppDelegate.h */,
 				6003F59D195388D20070C39A /* PBAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
+				F89500B81D877B710038A3E5 /* PBDropdown.plist */,
 				6003F5A5195388D20070C39A /* PBViewController.h */,
 				6003F5A6195388D20070C39A /* PBViewController.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
@@ -277,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
+				F89500B91D877B710038A3E5 /* PBDropdown.plist in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);

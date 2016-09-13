@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>properties</key>
+	<dict>
+		<key>rows</key>
+		<array>
+			<dict>
+				<key>clazz</key>
+				<string>PBTableViewCell</string>
+				<key>properties</key>
+				<dict>
+					<key>layoutMargins</key>
+					<string>{0,0,0,0}</string>
+					<key>textLabel.text</key>
+					<string>Hello</string>
+					<key>imageView.imageName</key>
+					<string>bomb_icon_add</string>
+					<key>href</key>
+					<string>%(action://alert?title=%@&amp;btns=OK),.textLabel.text</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>clazz</key>
+				<string>PBTableViewCell</string>
+				<key>properties</key>
+				<dict>
+					<key>textLabel.text</key>
+					<string>World</string>
+					<key>imageView.imageName</key>
+					<string>bomb_icon_help</string>
+					<key>href</key>
+					<string>%(action://alert?title=%@&amp;btns=OK),.textLabel.text</string>
+				</dict>
+			</dict>
+		</array>
+	</dict>
+</dict>
+</plist>
