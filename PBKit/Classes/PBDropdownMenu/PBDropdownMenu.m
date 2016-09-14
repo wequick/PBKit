@@ -46,10 +46,11 @@ static CGRect                kTargetRect;
     
     CGContextRef ctx = UIGraphicsGetCurrentContext();
     
+    // Draw a triangle: △
     CGContextBeginPath(ctx);
-    CGContextMoveToPoint   (ctx, CGRectGetMinX(indicatorFrame), CGRectGetMaxY(rect));  // left bottom
-    CGContextAddLineToPoint(ctx, CGRectGetMidX(indicatorFrame), CGRectGetMinY(rect));  // mid top
-    CGContextAddLineToPoint(ctx, CGRectGetMaxX(indicatorFrame), CGRectGetMaxY(rect));  // bottom left
+    CGContextMoveToPoint   (ctx, CGRectGetMinX(rect), CGRectGetMaxY(rect));  /* /   */
+    CGContextAddLineToPoint(ctx, CGRectGetMaxX(rect), CGRectGetMaxY(rect));  /*   \ */
+    CGContextAddLineToPoint(ctx, CGRectGetMidX(rect), CGRectGetMinY(rect));  /* __  */
     CGContextClosePath(ctx);
     
     [self.indicatorColor setFill];
@@ -110,6 +111,8 @@ static CGRect                kTargetRect;
     kPopingMenu = self;
     if (kIndicator == nil) {
         kIndicator = [[_PBDropdownIndicator alloc] init];
+        [kIndicator setBackgroundColor:[UIColor clearColor]];
+        [kIndicator setIndicatorColor:[UIColor clearColor]];
     }
     if (kCover == nil) {
         kCover = [[_PBDropdownCover alloc] initWithFrame:[UIScreen mainScreen].bounds];
@@ -117,16 +120,9 @@ static CGRect                kTargetRect;
     
     CGFloat x = CGRectGetMidX(kTargetRect);
     CGFloat y = CGRectGetMaxY(kTargetRect) + kMarginTop;
-    CGRect frame = [UIScreen mainScreen].bounds;
-    
-    frame.origin.y = y;
-    frame.size.height = kIndicatorHeight;
-    [kIndicator setFrame:frame];
-    [kIndicator setBackgroundColor:[UIColor clearColor]];
-    CGRect indicatorFrame = CGRectMake(x - (kIndicatorWidth / 2), y, kIndicatorWidth, kIndicatorHeight);
-    [kIndicator setIndicatorFrame:indicatorFrame];
-    
-    [kPopingMenu setFrame:CGRectMake(x, y, 0, 0)];
+    CGRect fromRect = CGRectMake(x, y, 0, 0);
+    [kIndicator setFrame:fromRect];
+    [kPopingMenu setFrame:fromRect];
     
     [kPopingWindow addSubview:kCover];
     [kPopingWindow addSubview:kIndicator];
@@ -148,9 +144,12 @@ static CGRect                kTargetRect;
     [kPopingMenu setAlpha:0];
     
     [UIView animateWithDuration:.3 animations:^{
+        CGFloat x = CGRectGetMidX(kTargetRect);
         CGFloat y = CGRectGetMaxY(kTargetRect) + kMarginTop;
         CGSize size = kPopingMenu.contentSize;
         size.width = kPopingMenu.menuWidth;
+        
+        [kIndicator setFrame:CGRectMake(x - (kIndicatorWidth / 2), y, kIndicatorWidth, kIndicatorHeight)];
         [kPopingMenu setFrame:CGRectMake([UIScreen mainScreen].bounds.size.width - size.width - kMarginRight, y + kIndicatorHeight, size.width, size.height)];
         [kCover setAlpha:1];
         [kIndicator setAlpha:1];
@@ -183,8 +182,10 @@ static CGRect                kTargetRect;
     if (animated) {
         CGFloat x = CGRectGetMidX(kTargetRect);
         CGFloat y = CGRectGetMaxY(kTargetRect) + kMarginTop;
-        [UIView animateWithDuration:.2 animations:^{
-            [kPopingMenu setFrame:CGRectMake(x, y, 0, 0)];
+        CGRect fromRect = CGRectMake(x, y, 0, 0);
+        [UIView animateWithDuration:.25 animations:^{
+            [kIndicator setFrame:fromRect];
+            [kPopingMenu setFrame:fromRect];
             [kCover setAlpha:0];
             [kIndicator setAlpha:0];
             [kPopingMenu setAlpha:0];
