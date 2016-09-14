@@ -22,6 +22,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    [self.navigationController.navigationBar setBarTintColor:[UIColor blackColor]];
+    [self.view setBackgroundColor:[UIColor lightGrayColor]];
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(showMenu:)];
     self.navigationItem.rightBarButtonItem = item;
 }
