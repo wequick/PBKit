@@ -36,7 +36,7 @@
 
 - (void)showMenu:(id)sender {
     if (_menu == nil) {
-        _menu = [[PBDropdownMenu alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+        _menu = [[PBDropdownMenu alloc] init];
         [_menu setPlist:@"PBDropdown"];
     }
     [_menu showAndPointToBarButtonItem:sender];
