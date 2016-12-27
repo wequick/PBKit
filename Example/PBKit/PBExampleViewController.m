@@ -6,17 +6,17 @@
 //  Copyright (c) 2016 galenlin. All rights reserved.
 //
 
-#import "PBViewController.h"
+#import "PBExampleViewController.h"
 #import <PBKit/PBDropdownMenu.h>
 
-@interface PBViewController ()
+@interface PBExampleViewController ()
 {
     PBDropdownMenu *_menu;
 }
 
 @end
 
-@implementation PBViewController
+@implementation PBExampleViewController
 
 - (void)viewDidLoad
 {

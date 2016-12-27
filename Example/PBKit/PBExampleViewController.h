@@ -8,6 +8,6 @@
 
 @import UIKit;
 
-@interface PBViewController : UIViewController
+@interface PBExampleViewController : UIViewController
 
 @end
