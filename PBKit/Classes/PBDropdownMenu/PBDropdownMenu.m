@@ -74,6 +74,24 @@ static CGRect                kTargetRect;
 
 @end
 
+#pragma mark - DataSource
+
+@interface _PBDropdownInternalDelegate : NSObject<UITableViewDelegate>
+
+@end
+
+@implementation _PBDropdownInternalDelegate
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    cell.backgroundColor = tableView.backgroundColor;
+}
+
+- (void)tableView:(PBDropdownMenu *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView hideWithAnimated:NO];
+}
+
+@end
+
 #pragma mark - PBTableView - Private
 
 @interface PBTableView (Private)
@@ -85,6 +103,9 @@ static CGRect                kTargetRect;
 #pragma mark - PBDropdownMenu
 
 @implementation PBDropdownMenu
+{
+    _PBDropdownInternalDelegate *_internalDelegate;
+}
 
 - (void)config {
     [super config];
@@ -97,6 +118,8 @@ static CGRect                kTargetRect;
     self.menuWidth = 146.0f;
     self.coverColor = [UIColor colorWithWhite:0 alpha:.1];
     self.separatorColor = [UIColor colorWithWhite:0 alpha:.1];
+    
+    _internalDelegate = [[_PBDropdownInternalDelegate alloc] init];
 }
 
 - (void)showAndPointToBarButtonItem:(UIBarButtonItem *)barButtonItem {
@@ -132,6 +155,7 @@ static CGRect                kTargetRect;
         // Waiting for reloadData
         return;
     }
+    
     [self showWithAnimated];
 }
 
@@ -154,6 +178,8 @@ static CGRect                kTargetRect;
         [kCover setAlpha:1];
         [kIndicator setAlpha:1];
         [kPopingMenu setAlpha:1];
+    } completion:^(BOOL finished) {
+        self.delegate = _internalDelegate;
     }];
 }
 
@@ -173,6 +199,7 @@ static CGRect                kTargetRect;
         [kCover removeFromSuperview];
         [self removeFromSuperview];
         
+        self.delegate = nil;
         kIndicator = nil;
         kCover = nil;
         kPopingMenu = nil;
@@ -200,18 +227,6 @@ static CGRect                kTargetRect;
     dispatch_async(dispatch_get_main_queue(), ^{
         [self showWithAnimated];
     });
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
-    cell.backgroundColor = tableView.backgroundColor;
-    return cell;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self hideWithAnimated:NO completion:^{
-        [super tableView:tableView didSelectRowAtIndexPath:indexPath];
-    }];
 }
 
 @end
