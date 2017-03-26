@@ -17,8 +17,13 @@ A group of UI components that using Pbind which can simply configure layout and 
 #  s.source_files = 'PBKit/Classes/**/*'
 
   s.subspec 'PBDropdownMenu' do |sub|
-    sub.source_files = 'PBKit/Classes/PBDropdownMenu/**/*'
+    sub.source_files = 'PBKit/PBDropdownMenu/**/*'
   end
+
+  s.subspec 'PBImageView' do |sub|
+    sub.source_files = 'PBKit/PBImageView/**/*'
+  end
+
 
   s.dependency 'Pbind' 
 end
