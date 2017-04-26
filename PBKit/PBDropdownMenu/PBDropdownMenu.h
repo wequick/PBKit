@@ -30,6 +30,11 @@
 @property (nonatomic, strong) UIColor *coverColor;
 
 /**
+ The offset of pointer.
+ */
+@property (nonatomic, assign) CGSize pointOffset;
+
+/**
  Displays the menu and point to a UIBarButtonItem.
  */
 - (void)showAndPointToBarButtonItem:(UIBarButtonItem *)barButtonItem;
