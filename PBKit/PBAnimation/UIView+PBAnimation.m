@@ -14,6 +14,11 @@
 @implementation UIView (PBAnimation)
 
 - (void)setPb_anims:(NSArray *)anims {
+    NSArray *prevAnims = [self pb_anims];
+    for (NSString *animKey in prevAnims) {
+        [self.layer removeAnimationForKey:animKey];
+    }
+    
     [self setValue:anims forAdditionKey:@"pb_anims"];
     
     for (NSString *animPlist in anims) {
