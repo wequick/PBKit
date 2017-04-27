@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'PBKit'
-  s.version          = '0.3.0'
+  s.version          = '0.4.0'
   s.summary          = 'UIKit with Pbind.'
   s.description      = <<-DESC
 A group of UI components that using Pbind which can simply configure layout and data source with Plist.
