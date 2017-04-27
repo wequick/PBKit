@@ -13,7 +13,11 @@
 @implementation PBAnimationMapper
 
 + (void)load {
-    [PBValueParser registerEnums:@{@"repeatForever": @(HUGE_VALF)}];
+    [PBValueParser registerEnums:@{@"repeatForever": @(HUGE_VALF),
+                                   @"PI": @(M_PI),
+                                   @"PI_2": @(M_PI_2),
+                                   @"PI_4": @(M_PI_4),
+                                   @"2_PI": @(M_2_PI)}];
     [Pbind registerPlistReloader:^(UIView *rootView, UIView *view, NSString *changedPlist, BOOL *stop) {
         NSArray *animPlistNames = view.pb_anims;
         if (animPlistNames != nil && [animPlistNames containsObject:changedPlist]) {
