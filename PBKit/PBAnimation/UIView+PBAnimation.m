@@ -7,8 +7,6 @@
 //
 
 #import "UIView+PBAnimation.h"
-#import "UIView+Pbind.h"
-#import "PBInline.h"
 #import "PBAnimationMapper.h"
 
 @implementation UIView (PBAnimation)
