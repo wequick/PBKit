@@ -59,7 +59,6 @@
 
 - (void)onDisplay:(CADisplayLink *)link {
     CGFloat progress = (CACurrentMediaTime() - _timestamp) / _duration;
-    NSLog(@"==== %.2f", progress);
     BOOL complected = NO;
     if (progress >= 1.f) {
         progress = 1.f;
