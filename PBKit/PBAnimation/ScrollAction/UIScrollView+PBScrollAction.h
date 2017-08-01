@@ -12,8 +12,6 @@
 
 @property (nonatomic, strong) NSArray *pb_scrollActions;
 
-- (void)pb_loadScrollAction:(NSString *)actionName;
-
 - (void)pb_triggerScrollActions;
 
 @end

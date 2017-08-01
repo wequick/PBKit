@@ -27,15 +27,19 @@
         [_mapper mapPropertiesToObject:self withData:scrollView.rootData context:scrollView];
     }
     
-    if ([self respondsToSelector:@selector(canRunActionWithScrollView:)]) {
-        if (![self canRunActionWithScrollView:scrollView]) {
-            return;
-        }
+    if (![self canRunActionWithScrollView:scrollView]) {
+        return;
     }
     
-    if ([self respondsToSelector:@selector(actionWithScrollView:)]) {
-        [self actionWithScrollView:scrollView];
-    }
+    [self actionWithScrollView:scrollView];
+}
+
+- (BOOL)canRunActionWithScrollView:(UIScrollView *)scrollView {
+    return YES;
+}
+
+- (void)actionWithScrollView:(UIScrollView *)scrollView {
+    // Stub
 }
 
 @end
