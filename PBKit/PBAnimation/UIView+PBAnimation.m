@@ -38,7 +38,7 @@
         }
         
         CAAnimation *anim = [animClass animation];
-        [animMapper setPropertiesToObject:anim transform:^id(NSString *key, id value) {
+        [animMapper initPropertiesForTarget:anim transform:^id(NSString *key, id value) {
             if ([key isEqualToString:@"timingFunction"]) {
                 value = [self timingFunctionFromString:value];
             } else if ([key isEqualToString:@"timingFunctions"]) {

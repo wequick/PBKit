@@ -22,9 +22,9 @@
 
 - (void)_internalActionWithScrollView:(UIScrollView *)scrollView {
     if (_mapper != nil) {
-        [_mapper setPropertiesToObject:self transform:nil];
+        [_mapper initPropertiesForTarget:self transform:nil];
         self.target = _mapper.target;
-        [_mapper mapPropertiesToObject:self withData:scrollView.rootData context:scrollView];
+        [_mapper mapPropertiesToTarget:self withData:scrollView.rootData owner:scrollView context:scrollView];
     }
     
     if (![self canRunActionWithScrollView:scrollView]) {
