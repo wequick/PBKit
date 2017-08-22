@@ -15,6 +15,15 @@
     PBActionMapper *_testActionMapper;
 }
 
++ (JSContext *)sharedJSContext {
+    static JSContext *context = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        context = [[JSContext alloc] init];
+    });
+    return context;
+}
+
 - (BOOL)canRunActionWithScrollView:(UIScrollView *)scrollView {
     if (!scrollView.dragging) {
         return NO;
@@ -24,7 +33,7 @@
         return NO;
     }
     
-    JSContext *context = [[JSContext alloc] init];
+    JSContext *context = [[self class] sharedJSContext];
     context[@"y"] = @(scrollView.contentOffset.y);
     BOOL passed = [[context evaluateScript:self.test] toBool];
     return passed;
