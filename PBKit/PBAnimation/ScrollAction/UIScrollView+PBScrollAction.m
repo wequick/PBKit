@@ -20,6 +20,7 @@
 @implementation UIScrollView (PBScrollAction)
 
 static NSString *const kPBScrollActionsKey = @"pb_scrollActions";
+static NSString *const kPBScrollActionMappersKey = @"pb_scrollActionMappers";
 
 - (void)setPb_scrollActions:(NSArray *)value {
     [self setValue:value forAdditionKey:kPBScrollActionsKey];
@@ -34,6 +35,8 @@ static NSString *const kPBScrollActionsKey = @"pb_scrollActions";
     if (actions.count == 0) {
         return;
     }
+    
+    NSMutableArray *facadeActions = [NSMutableArray arrayWithCapacity:actions.count];
     
     for (id action in actions) {
         PBScrollAction *scrollAction = nil;
@@ -50,8 +53,14 @@ static NSString *const kPBScrollActionsKey = @"pb_scrollActions";
             scrollAction = [PBScrollAction actionWithMapper:mapper];
         }
         
+        if (scrollAction == nil) {
+            continue;
+        }
         [scrollAction _internalActionWithScrollView:self];
+        [facadeActions addObject:scrollAction];
     }
+    
+    self.pb_scrollActions = facadeActions;
 }
 
 @end
