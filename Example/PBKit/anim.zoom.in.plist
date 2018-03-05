@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!--
-   anim.zoom.in.plist
-   PBKit
-
-   Created by galen on 2018/3/3.
-   Copyright (c) 2018年 galenlin. All rights reserved.
--->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-    <dict>
-    
-    </dict>
+<dict>
+	<key>properties</key>
+	<dict>
+		<key>toValue</key>
+		<integer>0</integer>
+		<key>keyPath</key>
+		<string>transform.scale</string>
+		<key>duration</key>
+		<integer>1</integer>
+		<key>removeOnComplection</key>
+		<true/>
+	</dict>
+</dict>
 </plist>

@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14433CF8D165B5D08588DD2D /* PBDirectoryWatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 315ECDCD78D3A1598F4886E2 /* PBDirectoryWatcher.h */; };
+		1FD9E2C1D7A7E2463AABAF89 /* PBLLRemoteWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 8784DA43633E389DE979A138 /* PBLLRemoteWatcher.m */; };
+		2162671B6DF70C87773BDF0A /* NSInputStream+Reader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9C5266311B31DF62880E9 /* NSInputStream+Reader.m */; };
+		3CBB5A6DED2401BAFD8F16C5 /* PBDirectoryWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EB3AD01943F02BC4FFDC95 /* PBDirectoryWatcher.m */; };
+		41F33EC45547CB9C814683DC /* PBLLInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 57426020ED3024191348E253 /* PBLLInspector.m */; };
+		4390AE2D65FFA48A6F9C7673 /* PBLLInspectorController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B8712CCCA7BC80B709BCC46 /* PBLLInspectorController.h */; };
+		5EC7AB6102C91C5F8B7EE2FC /* PBLiveLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = EB50673C6995039DB4F0215D /* PBLiveLoader.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -20,9 +27,23 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		70A2C7E1055FEB7D6AC8A95B /* PBSimulatorEnviroment.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D43472D8A8334EA6756F37A /* PBSimulatorEnviroment.h */; };
+		7FA643CFF780060E96B5DB4E /* NSInputStream+Reader.h in Headers */ = {isa = PBXBuildFile; fileRef = C68C26B8C64A02C3E2D37483 /* NSInputStream+Reader.h */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		882480C2505BA8DAA48348F0 /* PBLLRemoteWatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A14B0B0BA76FE557837A5E6 /* PBLLRemoteWatcher.h */; };
+		8C81F0B941433E8D2E2E82FD /* PBLiveLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 439758251D9A88584AEAAEE1 /* PBLiveLoader.h */; };
+		BF0E5048D417F0308987EB50 /* PBLLInspectorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06EC0B79B25C47D4F34216AF /* PBLLInspectorController.m */; };
 		E2BD4FD007BF562C067AF12F /* Pods_PBKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5F79C7130869A48C8A9EAF5 /* Pods_PBKit_Example.framework */; };
+		E5198386C8A26A97C25C64ED /* ignore.h in Headers */ = {isa = PBXBuildFile; fileRef = 683072B22C6E964C6ECA9A10 /* ignore.h */; };
+		F85237A6204AE6A300E498FB /* example.anim.action.plist in Resources */ = {isa = PBXBuildFile; fileRef = F85237A5204AE6A300E498FB /* example.anim.action.plist */; };
+		F85237A8204AE6D400E498FB /* anim.zoom.in.plist in Resources */ = {isa = PBXBuildFile; fileRef = F85237A7204AE6D400E498FB /* anim.zoom.in.plist */; };
+		F85237AA204AE74D00E498FB /* anim.move.right.plist in Resources */ = {isa = PBXBuildFile; fileRef = F85237A9204AE74D00E498FB /* anim.move.right.plist */; };
+		F85237AC204AE83000E498FB /* anim.zoom.out.plist in Resources */ = {isa = PBXBuildFile; fileRef = F85237AB204AE83000E498FB /* anim.zoom.out.plist */; };
+		F85237AE204AE88D00E498FB /* anim.move.left.plist in Resources */ = {isa = PBXBuildFile; fileRef = F85237AD204AE88D00E498FB /* anim.move.left.plist */; };
+		F85237B0204AF02700E498FB /* anim.transition.plist in Resources */ = {isa = PBXBuildFile; fileRef = F85237AF204AF02700E498FB /* anim.transition.plist */; };
+		F85237B5204B0C1E00E498FB /* view.example.plist in Resources */ = {isa = PBXBuildFile; fileRef = F85237B4204B0C1E00E498FB /* view.example.plist */; };
 		F89500B91D877B710038A3E5 /* PBDropdown.plist in Resources */ = {isa = PBXBuildFile; fileRef = F89500B81D877B710038A3E5 /* PBDropdown.plist */; };
+		F9D21C9B25CAD9271A357128 /* PBLLInspector.h in Headers */ = {isa = PBXBuildFile; fileRef = 87845B66B092F3E069DD03DF /* PBLLInspector.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +57,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06EC0B79B25C47D4F34216AF /* PBLLInspectorController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PBLLInspectorController.m; path = PBLiveLoader/PBLLInspectorController.m; sourceTree = "<group>"; };
+		0B8712CCCA7BC80B709BCC46 /* PBLLInspectorController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PBLLInspectorController.h; path = PBLiveLoader/PBLLInspectorController.h; sourceTree = "<group>"; };
 		17811D383F1D1D927B3D2AF0 /* Pods-PBKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PBKit_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-PBKit_Example/Pods-PBKit_Example.release.xcconfig"; sourceTree = "<group>"; };
+		315ECDCD78D3A1598F4886E2 /* PBDirectoryWatcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PBDirectoryWatcher.h; path = PBLiveLoader/PBDirectoryWatcher.h; sourceTree = "<group>"; };
 		318AC3B8CC81F9454DFD4329 /* Pods_PBKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PBKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		439758251D9A88584AEAAEE1 /* PBLiveLoader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PBLiveLoader.h; path = PBLiveLoader/PBLiveLoader.h; sourceTree = "<group>"; };
+		4DB9C5266311B31DF62880E9 /* NSInputStream+Reader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSInputStream+Reader.m"; path = "PBLiveLoader/NSInputStream+Reader.m"; sourceTree = "<group>"; };
+		57426020ED3024191348E253 /* PBLLInspector.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PBLLInspector.m; path = PBLiveLoader/PBLLInspector.m; sourceTree = "<group>"; };
+		5A14B0B0BA76FE557837A5E6 /* PBLLRemoteWatcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PBLLRemoteWatcher.h; path = PBLiveLoader/PBLLRemoteWatcher.h; sourceTree = "<group>"; };
 		5EB58A61811D272EE32235B6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		5F4BD8408EF317DF3CF06C9D /* PBKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PBKit.podspec; path = ../PBKit.podspec; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* PBKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PBKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,10 +87,24 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
+		60EB3AD01943F02BC4FFDC95 /* PBDirectoryWatcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PBDirectoryWatcher.m; path = PBLiveLoader/PBDirectoryWatcher.m; sourceTree = "<group>"; };
+		683072B22C6E964C6ECA9A10 /* ignore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ignore.h; path = PBLocalhost/ignore.h; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		87845B66B092F3E069DD03DF /* PBLLInspector.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PBLLInspector.h; path = PBLiveLoader/PBLLInspector.h; sourceTree = "<group>"; };
+		8784DA43633E389DE979A138 /* PBLLRemoteWatcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PBLLRemoteWatcher.m; path = PBLiveLoader/PBLLRemoteWatcher.m; sourceTree = "<group>"; };
+		8D43472D8A8334EA6756F37A /* PBSimulatorEnviroment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PBSimulatorEnviroment.h; path = PBLiveLoader/PBSimulatorEnviroment.h; sourceTree = "<group>"; };
 		9BD79D831155523CB3E87B9C /* Pods-PBKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PBKit_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PBKit_Example/Pods-PBKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		C68C26B8C64A02C3E2D37483 /* NSInputStream+Reader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSInputStream+Reader.h"; path = "PBLiveLoader/NSInputStream+Reader.h"; sourceTree = "<group>"; };
 		D5F79C7130869A48C8A9EAF5 /* Pods_PBKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PBKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E209452A476CD14D9B7450D2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		EB50673C6995039DB4F0215D /* PBLiveLoader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PBLiveLoader.m; path = PBLiveLoader/PBLiveLoader.m; sourceTree = "<group>"; };
+		F85237A5204AE6A300E498FB /* example.anim.action.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = example.anim.action.plist; sourceTree = "<group>"; };
+		F85237A7204AE6D400E498FB /* anim.zoom.in.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = anim.zoom.in.plist; sourceTree = "<group>"; };
+		F85237A9204AE74D00E498FB /* anim.move.right.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = anim.move.right.plist; sourceTree = "<group>"; };
+		F85237AB204AE83000E498FB /* anim.zoom.out.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = anim.zoom.out.plist; sourceTree = "<group>"; };
+		F85237AD204AE88D00E498FB /* anim.move.left.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = anim.move.left.plist; sourceTree = "<group>"; };
+		F85237AF204AF02700E498FB /* anim.transition.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = anim.transition.plist; sourceTree = "<group>"; };
+		F85237B4204B0C1E00E498FB /* view.example.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = view.example.plist; sourceTree = "<group>"; };
 		F89500B81D877B710038A3E5 /* PBDropdown.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PBDropdown.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,6 +133,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		46AC141A2C254698B201B033 /* PBLocalhost */ = {
+			isa = PBXGroup;
+			children = (
+				683072B22C6E964C6ECA9A10 /* ignore.h */,
+			);
+			name = PBLocalhost;
+			sourceTree = "<group>";
+		};
+		4F71646E03E3E925E05932F4 /* PBLiveLoader */ = {
+			isa = PBXGroup;
+			children = (
+				4DB9C5266311B31DF62880E9 /* NSInputStream+Reader.m */,
+				8784DA43633E389DE979A138 /* PBLLRemoteWatcher.m */,
+				EB50673C6995039DB4F0215D /* PBLiveLoader.m */,
+				06EC0B79B25C47D4F34216AF /* PBLLInspectorController.m */,
+				60EB3AD01943F02BC4FFDC95 /* PBDirectoryWatcher.m */,
+				87845B66B092F3E069DD03DF /* PBLLInspector.h */,
+				5A14B0B0BA76FE557837A5E6 /* PBLLRemoteWatcher.h */,
+				C68C26B8C64A02C3E2D37483 /* NSInputStream+Reader.h */,
+				315ECDCD78D3A1598F4886E2 /* PBDirectoryWatcher.h */,
+				0B8712CCCA7BC80B709BCC46 /* PBLLInspectorController.h */,
+				439758251D9A88584AEAAEE1 /* PBLiveLoader.h */,
+				57426020ED3024191348E253 /* PBLLInspector.m */,
+				8D43472D8A8334EA6756F37A /* PBSimulatorEnviroment.h */,
+			);
+			name = PBLiveLoader;
+			sourceTree = SOURCE_ROOT;
+		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +170,8 @@
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
 				DA77BEB6A9C2C6D1C2F1A565 /* Pods */,
+				4F71646E03E3E925E05932F4 /* PBLiveLoader */,
+				46AC141A2C254698B201B033 /* PBLocalhost */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +200,8 @@
 		6003F593195388D20070C39A /* Example for PBKit */ = {
 			isa = PBXGroup;
 			children = (
+				F85237B2204B0BF400E498FB /* plist */,
+				F85237A4204AE68F00E498FB /* anim */,
 				6003F59C195388D20070C39A /* PBAppDelegate.h */,
 				6003F59D195388D20070C39A /* PBAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
@@ -190,7 +264,54 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F85237A4204AE68F00E498FB /* anim */ = {
+			isa = PBXGroup;
+			children = (
+				F85237A5204AE6A300E498FB /* example.anim.action.plist */,
+				F85237A7204AE6D400E498FB /* anim.zoom.in.plist */,
+				F85237A9204AE74D00E498FB /* anim.move.right.plist */,
+				F85237AB204AE83000E498FB /* anim.zoom.out.plist */,
+				F85237AD204AE88D00E498FB /* anim.move.left.plist */,
+				F85237AF204AF02700E498FB /* anim.transition.plist */,
+			);
+			name = anim;
+			sourceTree = "<group>";
+		};
+		F85237B2204B0BF400E498FB /* plist */ = {
+			isa = PBXGroup;
+			children = (
+				F85237B3204B0C0400E498FB /* anim */,
+				F85237B4204B0C1E00E498FB /* view.example.plist */,
+			);
+			path = plist;
+			sourceTree = "<group>";
+		};
+		F85237B3204B0C0400E498FB /* anim */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = anim;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		79D15F4C604ACED2C2F46B76 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9D21C9B25CAD9271A357128 /* PBLLInspector.h in Headers */,
+				882480C2505BA8DAA48348F0 /* PBLLRemoteWatcher.h in Headers */,
+				7FA643CFF780060E96B5DB4E /* NSInputStream+Reader.h in Headers */,
+				14433CF8D165B5D08588DD2D /* PBDirectoryWatcher.h in Headers */,
+				4390AE2D65FFA48A6F9C7673 /* PBLLInspectorController.h in Headers */,
+				8C81F0B941433E8D2E2E82FD /* PBLiveLoader.h in Headers */,
+				70A2C7E1055FEB7D6AC8A95B /* PBSimulatorEnviroment.h in Headers */,
+				E5198386C8A26A97C25C64ED /* ignore.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		6003F589195388D20070C39A /* PBKit_Example */ = {
@@ -203,6 +324,7 @@
 				6003F588195388D20070C39A /* Resources */,
 				0391C69F0EFCD227FD202139 /* [CP] Embed Pods Frameworks */,
 				7DFF4F8EEB63E221BE9993EA /* [CP] Copy Pods Resources */,
+				79D15F4C604ACED2C2F46B76 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -241,6 +363,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = galenlin;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = 7ZUFDE47JA;
+					};
 					6003F5AD195388D20070C39A = {
 						LastSwiftMigration = 0820;
 						TestTargetID = 6003F589195388D20070C39A;
@@ -272,9 +397,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
+				F85237AA204AE74D00E498FB /* anim.move.right.plist in Resources */,
 				F89500B91D877B710038A3E5 /* PBDropdown.plist in Resources */,
+				F85237AC204AE83000E498FB /* anim.zoom.out.plist in Resources */,
+				F85237A6204AE6A300E498FB /* example.anim.action.plist in Resources */,
+				F85237B0204AF02700E498FB /* anim.transition.plist in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
+				F85237A8204AE6D400E498FB /* anim.zoom.in.plist in Resources */,
+				F85237B5204B0C1E00E498FB /* view.example.plist in Resources */,
+				F85237AE204AE88D00E498FB /* anim.move.left.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,9 +427,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PBKit_Example/Pods-PBKit_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/PBKit/PBKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Pbind/Pbind.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PBKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pbind.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -310,13 +447,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PBKit_Example-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7DFF4F8EEB63E221BE9993EA /* [CP] Copy Pods Resources */ = {
@@ -344,6 +484,12 @@
 				6003F59E195388D20070C39A /* PBAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* PBExampleViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				2162671B6DF70C87773BDF0A /* NSInputStream+Reader.m in Sources */,
+				1FD9E2C1D7A7E2463AABAF89 /* PBLLRemoteWatcher.m in Sources */,
+				5EC7AB6102C91C5F8B7EE2FC /* PBLiveLoader.m in Sources */,
+				BF0E5048D417F0308987EB50 /* PBLLInspectorController.m in Sources */,
+				3CBB5A6DED2401BAFD8F16C5 /* PBDirectoryWatcher.m in Sources */,
+				41F33EC45547CB9C814683DC /* PBLLInspector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +610,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 7ZUFDE47JA;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PBKit/PBKit-Prefix.pch";
 				INFOPLIST_FILE = "PBKit/PBKit-Info.plist";
@@ -480,6 +627,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 7ZUFDE47JA;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PBKit/PBKit-Prefix.pch";
 				INFOPLIST_FILE = "PBKit/PBKit-Info.plist";

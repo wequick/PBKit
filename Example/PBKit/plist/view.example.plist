@@ -1,14 +1,124 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!--
-   view.example.plist
-   PBKit
-
-   Created by galen on 2018/3/4.
-   Copyright (c) 2018年 galenlin. All rights reserved.
--->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-    <dict>
-    
-    </dict>
+<dict>
+	<key>views</key>
+	<dict>
+		<key>title</key>
+		<dict>
+			<key>clazz</key>
+			<string>UILabel</string>
+			<key>properties</key>
+			<dict>
+				<key>text</key>
+				<string>Pbind</string>
+				<key>textColor</key>
+				<string>#fff</string>
+				<key>textAlignment</key>
+				<string>:center</string>
+				<key>backgroundColor</key>
+				<string>#f00@.8</string>
+				<key>!click</key>
+				<dict>
+					<key>type</key>
+					<string>alert</string>
+					<key>title</key>
+					<string>Hello</string>
+				</dict>
+			</dict>
+		</dict>
+		<key>tips</key>
+		<dict>
+			<key>clazz</key>
+			<string>UILabel</string>
+			<key>properties</key>
+			<dict>
+				<key>text</key>
+				<string>Test PBAnimationAction</string>
+				<key>textColor</key>
+				<string>#fff</string>
+				<key>textAlignment</key>
+				<string>:center</string>
+				<key>backgroundColor</key>
+				<string>#0f0@.5</string>
+				<key>!click</key>
+				<dict>
+					<key>type</key>
+					<string>alert</string>
+					<key>title</key>
+					<string>World</string>
+				</dict>
+			</dict>
+		</dict>
+		<key>down</key>
+		<dict>
+			<key>clazz</key>
+			<string>PBButton</string>
+			<key>properties</key>
+			<dict>
+				<key>text</key>
+				<string>Down</string>
+				<key>!click</key>
+				<dict>
+					<key>type</key>
+					<string>animate</string>
+					<key>anims</key>
+					<array>
+						<dict>
+							<key>type</key>
+							<string>constraint</string>
+							<key>target</key>
+							<string>@title</string>
+							<key>keyPath</key>
+							<string>height</string>
+							<key>toValue</key>
+							<integer>100</integer>
+						</dict>
+					</array>
+				</dict>
+			</dict>
+		</dict>
+		<key>up</key>
+		<dict>
+			<key>clazz</key>
+			<string>PBButton</string>
+			<key>properties</key>
+			<dict>
+				<key>text</key>
+				<string>Up</string>
+				<key>!click</key>
+				<dict>
+					<key>type</key>
+					<string>animate</string>
+					<key>anims</key>
+					<array>
+						<dict>
+							<key>type</key>
+							<string>constraint</string>
+							<key>target</key>
+							<string>@title</string>
+							<key>keyPath</key>
+							<string>height</string>
+							<key>toValue</key>
+							<integer>30</integer>
+						</dict>
+					</array>
+				</dict>
+			</dict>
+		</dict>
+	</dict>
+	<key>formats</key>
+	<array>
+		<string>|-20-[down(==60)]-[up(==60)]</string>
+		<string>V:[down(==44)]-20-[title(==30)]-20-[tips]</string>
+		<string>|-20-[title]</string>
+	</array>
+	<key>constraints</key>
+	<array>
+		<string>T:down=20</string>
+		<string>up.top=down.top</string>
+		<string>up.height=down.height</string>
+		<string>tips.left=title.left</string>
+	</array>
+</dict>
 </plist>

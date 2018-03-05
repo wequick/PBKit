@@ -1,14 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!--
-   example.anim.action.plist
-   PBKit
-
-   Created by galen on 2018/3/3.
-   Copyright (c) 2018年 galenlin. All rights reserved.
--->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-    <dict>
-    
-    </dict>
+<dict>
+	<key>properties</key>
+	<dict>
+		<key>text</key>
+		<string>Pbind</string>
+		<key>!click</key>
+		<dict>
+			<key>type</key>
+			<string>animate</string>
+			<key>anims</key>
+			<array>
+				<dict>
+					<key>keyPath</key>
+					<string>transform.scale</string>
+					<key>toValue</key>
+					<real>0.5</real>
+				</dict>
+				<dict>
+					<key>keyPath</key>
+					<string>transform.translation.y</string>
+					<key>byValue</key>
+					<integer>100</integer>
+				</dict>
+				<dict>
+					<key>after</key>
+					<true/>
+					<key>keyPath</key>
+					<string>transform.scale</string>
+					<key>toValue</key>
+					<integer>1</integer>
+				</dict>
+				<dict>
+					<key>keyPath</key>
+					<string>transform.translation.y</string>
+					<key>byValue</key>
+					<integer>-100</integer>
+				</dict>
+			</array>
+		</dict>
+	</dict>
+</dict>
 </plist>

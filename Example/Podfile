@@ -1,6 +1,13 @@
 use_frameworks!
-platform :ios, 8.0
+platform :ios, 9.0 
+
+require 'pathname'
+pn = Pathname.new('/Users/galen')
+localDebug = pn.exist?
 
 target 'PBKit_Example' do
   pod 'PBKit', :path => '../'
+  if localDebug then
+    pod 'Pbind', :path => '/Users/galen/Projects/github/wequick/Pbind'
+  end
 end
