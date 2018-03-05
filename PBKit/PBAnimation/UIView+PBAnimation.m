@@ -8,6 +8,7 @@
 
 #import "UIView+PBAnimation.h"
 #import "PBAnimationMapper.h"
+#import "PBAnimationInline.h"
 
 @implementation UIView (PBAnimation)
 
@@ -29,18 +30,8 @@
 }
 
 - (void)pb_loadAnim:(NSString *)animPlist {
-    NSDictionary *animConfig = PBPlist(animPlist);
-    if (animConfig != nil) {
-        PBAnimationMapper *animMapper = [PBAnimationMapper mapperWithDictionary:animConfig];
-        Class animClass = [animMapper animationClass];
-        if (animClass == nil) {
-            return;
-        }
-        
-        CAAnimation *anim = [animClass animation];
-        [animMapper initPropertiesForTarget:anim];
-        [animMapper mapPropertiesToTarget:anim withData:nil owner:self context:self];
-        
+    CAAnimation *anim = PBAnimationMake(animPlist, self);
+    if (anim != nil) {
         [self.layer addAnimation:anim forKey:animPlist];
     }
 }

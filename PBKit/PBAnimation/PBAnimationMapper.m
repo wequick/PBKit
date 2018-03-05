@@ -31,6 +31,9 @@
     NSString *clazz = self.clazz;
     if (clazz == nil) {
         if (self.type != nil && self.type.length >= 2) {
+            if ([self.type isEqualToString:@"transition"]) {
+                return [CATransition class];
+            }
             clazz = [NSString stringWithFormat:@"CA%c%@Animation", toupper([self.type characterAtIndex:0]), [self.type substringFromIndex:1]];
         } else {
             return [CABasicAnimation class];

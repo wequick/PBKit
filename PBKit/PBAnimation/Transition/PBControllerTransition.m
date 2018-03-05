@@ -80,7 +80,7 @@
     }];
 }
 
-- (void)animateWithActionMapper:(PBTransitionActionMapper *)actionMapper complection:(void (^)())complection {
+- (void)animateWithActionMapper:(PBTransitionActionMapper *)actionMapper complection:(void (^)(void))complection {
     if (actionMapper == nil) {
         complection();
         return;
