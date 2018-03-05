@@ -66,6 +66,12 @@
             toValue = @([currentValue floatValue] + [byValue floatValue]);
         } else {
             toValue = animConfig[@"toValue"];
+            if ([toValue isKindOfClass:[NSString class]]) {
+                expression = [PBMutableExpression expressionWithString:toValue];
+                if (expression != nil) {
+                    toValue = [expression valueWithData:nil target:nil owner:state.sender context:state.context];
+                }
+            }
         }
         if (toValue == nil) {
             continue;
