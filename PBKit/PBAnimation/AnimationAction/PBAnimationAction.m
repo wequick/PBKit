@@ -59,11 +59,14 @@
                 continue;
             }
             
-            if (![currentValue respondsToSelector:@selector(floatValue)]) {
-                continue;
+            if (currentValue == nil) {
+                toValue = byValue;
+            } else {
+                if (![currentValue respondsToSelector:@selector(floatValue)]) {
+                    continue;
+                }
+                toValue = @([currentValue floatValue] + [byValue floatValue]);
             }
-            
-            toValue = @([currentValue floatValue] + [byValue floatValue]);
         } else {
             toValue = animConfig[@"toValue"];
             if ([toValue isKindOfClass:[NSString class]]) {
