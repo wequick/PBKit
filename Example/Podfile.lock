@@ -1,15 +1,15 @@
 PODS:
-  - Pbind (1.6.2)
-  - PBKit (0.5.6):
+  - Pbind (1.9.1)
+  - PBKit (0.6.3):
     - Pbind
-    - PBKit/PBAnimation (= 0.5.6)
-    - PBKit/PBDropdownMenu (= 0.5.6)
-    - PBKit/PBImageView (= 0.5.6)
-  - PBKit/PBAnimation (0.5.6):
+    - PBKit/PBAnimation (= 0.6.3)
+    - PBKit/PBDropdownMenu (= 0.6.3)
+    - PBKit/PBImageView (= 0.6.3)
+  - PBKit/PBAnimation (0.6.3):
     - Pbind
-  - PBKit/PBDropdownMenu (0.5.6):
+  - PBKit/PBDropdownMenu (0.6.3):
     - Pbind
-  - PBKit/PBImageView (0.5.6):
+  - PBKit/PBImageView (0.6.3):
     - Pbind
 
 DEPENDENCIES:
@@ -23,8 +23,8 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  Pbind: 6dc8dfc9bbb735375a8714e8e296d7f544ccfe3b
-  PBKit: 7496bd90c5ea2e813d4df1c2eeb5d60119b307f7
+  Pbind: d617d28e4fada801b35ecc1d6d5d55d7fdbbef83
+  PBKit: 60e26db334e9f099f12d63cc3863687cc50b7389
 
 PODFILE CHECKSUM: 4ee9aa27cd5c1659c0676569ad405ed8639fcf4b
 
