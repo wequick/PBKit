@@ -8,7 +8,7 @@
 
 #import "PBDropdownAction.h"
 #import "PBDropdownMenu.h"
-#import "PBPropertyUtils.h"
+#import <Pbind/Pbind.h>
 
 @implementation PBDropdownAction
 {
