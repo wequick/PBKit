@@ -26,7 +26,7 @@
         NSNumber *afterValue = animConfig[@"after"];
         NSNumber *durationValue = animConfig[@"duration"];
         BOOL after = [afterValue boolValue];
-        NSTimeInterval duration = durationValue ? durationValue.floatValue : .25f;
+        NSTimeInterval duration = durationValue != nil ? durationValue.floatValue : .25f;
         if (after) {
             beginTime += duration;
         }
